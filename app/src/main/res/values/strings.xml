@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Between2Dates</string>
+    <string name="start_btn_n">START</string>
+    <string name="start_today_btn_n">TODAY</string>
+    <string name="end_btn_n">END</string>
+    <string name="end_today_btn_n">TODAY</string>
+    <string name="start_text_n">"DD/MM/YYYY"</string>
+    <string name="end_text_n">"DD/MM/YYYY"</string>
+    <string name="checkbox_n">Include End Date</string>
+    <string name="delete_btn_n">TODO</string>
+    <string name="done_btn_n">TODO</string>
+    <string name="result_text_n">""</string>
+
+    <string name="cen_text_n">CENTURY</string>
+    <string name="dec_text_n">DECADE</string>
+    <string name="yea_text_n">YEAR</string>
+    <string name="mon_unit_text_n">MONTH</string>
+    <string name="wee_text_n">WEEK</string>
+    <string name="day_text_n">DAY</string>
+    <string name="hour_text_n">HOUR</string>
+    <string name="min_text_n">MINUTE</string>
+    <string name="sec_text_n">SECOND</string>
+</resources>

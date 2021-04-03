@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/remove_ad_i"
+        android:title="Remove Ads" />
+    <item android:id="@+id/share_i"
+        android:title="Share" />
+    <item android:id="@+id/rate_i"
+        android:title="Rate Us" />
+
+
+</menu>

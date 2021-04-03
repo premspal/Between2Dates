@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <!-- Your scrolling content -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                tools:context=".MainActivity">
+
+                <Button
+                    android:id="@+id/start_btn_i"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="25dp"
+                    android:text="@string/start_btn_n"
+                    android:textStyle="bold|italic"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/start_today_btn_i"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:text="@string/start_today_btn_n"
+                    android:textStyle="bold|italic"
+                    app:layout_constraintBottom_toBottomOf="@+id/start_btn_i"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/start_btn_i"
+                    app:layout_constraintTop_toTopOf="@+id/start_btn_i"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <Button
+                    android:id="@+id/end_btn_i"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="36dp"
+                    android:text="@string/end_btn_n"
+                    android:textStyle="bold|italic"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/start_btn_i"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/start_btn_i"
+                    app:layout_constraintTop_toBottomOf="@+id/start_btn_i"
+                    app:layout_constraintVertical_bias="0.027" />
+
+                <Button
+                    android:id="@+id/end_today_btn_i"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/end_today_btn_n"
+                    android:textStyle="bold|italic"
+                    app:layout_constraintBottom_toBottomOf="@+id/end_btn_i"
+                    app:layout_constraintEnd_toEndOf="@+id/start_today_btn_i"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/start_today_btn_i"
+                    app:layout_constraintTop_toTopOf="@+id/end_btn_i"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <EditText
+                    android:id="@+id/start_text_i"
+                    android:layout_width="136dp"
+                    android:layout_height="38dp"
+                    android:inputType="date"
+                    android:padding="10dp"
+                    android:text="@string/start_text_n"
+                    android:textAlignment="center"
+                    app:layout_constraintBottom_toBottomOf="@+id/start_btn_i"
+                    app:layout_constraintEnd_toStartOf="@+id/start_today_btn_i"
+                    app:layout_constraintStart_toEndOf="@+id/start_btn_i"
+                    app:layout_constraintTop_toTopOf="@+id/start_btn_i" />
+
+                <EditText
+                    android:id="@+id/end_text_i"
+                    android:layout_width="136dp"
+                    android:layout_height="38dp"
+                    android:inputType="date"
+                    android:padding="10dp"
+                    android:text="@string/end_text_n"
+                    android:textAlignment="center"
+                    app:layout_constraintBottom_toBottomOf="@+id/end_btn_i"
+                    app:layout_constraintEnd_toEndOf="@+id/start_text_i"
+                    app:layout_constraintStart_toStartOf="@+id/start_text_i"
+                    app:layout_constraintTop_toTopOf="@+id/end_btn_i" />
+
+                <TextView
+                    android:id="@+id/result_text_i"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:freezesText="true"
+                    android:maxLines="5"
+                    android:padding="2dp"
+                    android:text="@string/result_text_n"
+                    android:textAlignment="center"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="@+id/end_today_btn_i"
+                    app:layout_constraintHorizontal_bias="0.484"
+                    app:layout_constraintStart_toStartOf="@+id/end_btn_i"
+                    app:layout_constraintTop_toBottomOf="@+id/delete_btn_i" />
+
+                <CheckBox
+
+                    android:id="@+id/checkbox_i"
+                    android:layout_width="84dp"
+                    android:layout_height="70dp"
+                    android:text="@string/checkbox_n"
+                    app:layout_constraintBottom_toBottomOf="@+id/delete_btn_i"
+                    app:layout_constraintEnd_toEndOf="@+id/end_today_btn_i"
+                    app:layout_constraintStart_toStartOf="@+id/end_today_btn_i"
+                    app:layout_constraintTop_toTopOf="@+id/delete_btn_i" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/delete_btn_i"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:contentDescription="@string/delete_btn_n"
+                    android:focusable="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/end_text_i"
+                    app:layout_constraintTop_toBottomOf="@+id/end_text_i"
+                    app:layout_constraintVertical_bias="0.048"
+                    app:srcCompat="@android:drawable/ic_menu_delete" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/done_btn_i"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:contentDescription="@string/done_btn_n"
+                    android:focusable="true"
+                    app:layout_constraintBottom_toBottomOf="@+id/delete_btn_i"
+                    app:layout_constraintEnd_toEndOf="@+id/end_text_i"
+                    app:layout_constraintTop_toTopOf="@+id/delete_btn_i"
+                    app:srcCompat="@drawable/ic_baseline_done_24" />
+
+                <TableLayout
+                    android:id="@+id/tb_i"
+                    android:layout_width="235dp"
+                    android:layout_height="270dp"
+                    android:layout_marginTop="15dp"
+                    android:textAlignment="center"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/result_text_i"
+                    app:layout_constraintStart_toStartOf="@+id/result_text_i"
+                    app:layout_constraintTop_toBottomOf="@+id/result_text_i"
+                    app:layout_constraintVertical_bias="0.100000024">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textAlignment="center">
+
+                        <TextView
+                            android:id="@+id/cen_text_i"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:text="@string/cen_text_n"
+
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/cen_unit_text_i"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:textSize="20sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/dec_text_i"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:text="@string/dec_text_n"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/dec_unit_text_i"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:textSize="20sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/yea_text_i"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:text="@string/yea_text_n"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/yea_unit_text_i"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:textSize="20sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/mon_text_i"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:text="@string/mon_unit_text_n"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/mon_unit_text_i"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:textSize="20sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/wee_text_i"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:text="@string/wee_text_n"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/wee_unit_text_i"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:textSize="20sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/day_text_i"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:text="@string/day_text_n"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/day_unit_text_i"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:textSize="20sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/hour_text_i"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:text="@string/hour_text_n"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/hour_unit_text_i"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:textSize="20sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="258dp"
+                        android:layout_height="5dp">
+
+                        <TextView
+                            android:id="@+id/min_text_i"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:text="@string/min_text_n"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/min_unit_text_i"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:textSize="20sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/sec_text_i"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:text="@string/sec_text_n"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/sec_unit_text_i"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:textSize="20sp" />
+                    </TableRow>
+                </TableLayout>
+
+                <com.google.android.gms.ads.AdView
+                    android:id="@+id/adView"
+                    android:layout_width="373dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    app:adSize="FULL_BANNER"
+                    app:adUnitId="ca-app-pub-3940256099942544/6300978111"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                </com.google.android.gms.ads.AdView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
