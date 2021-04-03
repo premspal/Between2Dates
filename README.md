@@ -10,4 +10,4 @@ Features:
 - date can be entered manually or selected from the START and END button or selected with the TODAY button. 
 - option to include or exclude end date
 
-<img src="image1.png" width=50% height=50%>
+<img src="image1.png" width=50% height=50%> <img src="image2.png" width=50% height=50%>
