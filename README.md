@@ -8,8 +8,9 @@ Features:
 - calculates the days between two dates
 - duration is shown in days and/or in weeks + days and/or in years + months + days etc.
 - date can be entered manually or selected from the START and END button or selected with the TODAY button. 
-- option to include or exclude end date
+- option to include or exclude end dat 
 
-example1.png            |  example2.png
-:-------------------------:|:-------------------------:
-<img src="image1.png" width=50% height=50%> |  <img src="image2.png" width=50% height=50%>
+<p float="left">
+ <img src="image1.png" width=50% height=50%>
+ <img src="image2.png" width=50% height=50%>
+</p>
